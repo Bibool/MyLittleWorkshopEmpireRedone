@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Managers">
+      <UniqueIdentifier>{e574d386-2af6-4ebc-9c72-7e8b1585836c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Managers\Input">
+      <UniqueIdentifier>{cfeadc26-740b-4146-856b-6e96bd2da12e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Managers\Game">
+      <UniqueIdentifier>{5ec68e1b-af9b-4083-925b-a9c09ee4be67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Managers">
+      <UniqueIdentifier>{41d70aea-7b78-4d84-85c1-89358eb16a49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Managers\Input">
+      <UniqueIdentifier>{d396496d-615f-4b39-a03d-0983c5cedcb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Managers\Game">
+      <UniqueIdentifier>{1c4031e2-11a1-4188-922b-9bbc22d4a00c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Types">
+      <UniqueIdentifier>{99a37466-349f-4c04-a2c3-05b292a58d02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Types\Enums">
+      <UniqueIdentifier>{de41433c-f8c8-452d-8d5f-3875d298b04e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Managers\Message">
+      <UniqueIdentifier>{c5f28fea-fb91-4ab0-ba54-bf034d921b64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Managers\Message">
+      <UniqueIdentifier>{d3d7c215-c030-4c75-8cca-67025a4e01a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Player">
+      <UniqueIdentifier>{67712b20-a0f6-4af7-a56e-98703b8e9e92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Tool">
+      <UniqueIdentifier>{eed1e273-c213-4744-9dbd-a6a22500e503}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tool">
+      <UniqueIdentifier>{5c6a4515-58de-487d-b66f-be40ce04c148}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player">
+      <UniqueIdentifier>{38353674-c98e-4ada-a943-3e94a36935d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Managers\Tool">
+      <UniqueIdentifier>{7561f99c-c71c-46d7-91fe-3fdf1d82495c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Managers\Tool">
+      <UniqueIdentifier>{42f9a175-2cb5-40a3-a841-d150463b6778}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Types\Structs">
+      <UniqueIdentifier>{1658a335-70fd-45af-9ac8-e12fefb21a7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Vehicle">
+      <UniqueIdentifier>{fe203611-27ae-49cd-8975-a459ba7d2ac4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Vehicle\Malfunction">
+      <UniqueIdentifier>{4ee698cb-be4e-4a54-a098-3507293a85e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Vehicle">
+      <UniqueIdentifier>{3edf1b5e-9807-4af8-8ea9-008eaa07547c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Vehicle\Malfunction">
+      <UniqueIdentifier>{590e8f03-ed8e-4f69-9e45-dd871613badb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Managers\Job">
+      <UniqueIdentifier>{dd39ed9d-391d-4ba1-ab9f-367653b92517}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Managers\Job">
+      <UniqueIdentifier>{e74b3a61-161a-48f4-8612-ff06e195bda6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Managers\Malfunction">
+      <UniqueIdentifier>{99d97b6d-2fb6-4e76-8c86-e61b392f3218}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Managers\Malfunction">
+      <UniqueIdentifier>{d37d4801-65bd-4def-ba9f-3572ebbd2fae}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Public\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\random.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\GameManager.h">
+      <Filter>Header Files\Managers\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\InputManager.h">
+      <Filter>Header Files\Managers\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\JobManager.h">
+      <Filter>Header Files\Managers\Job</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\MalfunctionManager.h">
+      <Filter>Header Files\Managers\Malfunction</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\MessageManager.h">
+      <Filter>Header Files\Managers\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\ToolManager.h">
+      <Filter>Header Files\Managers\Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\Player.h">
+      <Filter>Header Files\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\Tool.h">
+      <Filter>Header Files\Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\Malfunction.h">
+      <Filter>Header Files\Vehicle\Malfunction</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\MalfunctionData.h">
+      <Filter>Header Files\Types\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\MessageType.h">
+      <Filter>Header Files\Types\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\NameData.h">
+      <Filter>Header Files\Types\Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\Cheats.h">
+      <Filter>Header Files\Types\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\Vehicle.h">
+      <Filter>Header Files\Vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="Public\VehicleType.h">
+      <Filter>Header Files\Types\Enums</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Private\GameManager.cpp">
+      <Filter>Source Files\Managers\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\InputManager.cpp">
+      <Filter>Source Files\Managers\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\JobManager.cpp">
+      <Filter>Source Files\Managers\Job</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\Malfunction.cpp">
+      <Filter>Source Files\Vehicle\Malfunction</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\MalfunctionManager.cpp">
+      <Filter>Source Files\Managers\Malfunction</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\MessageManager.cpp">
+      <Filter>Source Files\Managers\Message</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\ToolManager.cpp">
+      <Filter>Source Files\Managers\Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\Tool.cpp">
+      <Filter>Source Files\Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\Player.cpp">
+      <Filter>Source Files\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Private\Vehicle.cpp">
+      <Filter>Source Files\Vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+</Project>
