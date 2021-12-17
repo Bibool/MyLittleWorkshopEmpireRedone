@@ -1,5 +1,5 @@
-#ifndef _MALFUNCTIONDATA_H_
-#define	_MALFUNCTIONDATA_H_
+#ifndef MALFUNCTIONDATA_H
+#define	MALFUNCTIONDATA_H
 
 #include "VehicleType.h"
 #include <list>
@@ -21,10 +21,10 @@ struct SMalfunctionData
 	{}
 
 	
-	const char* pszName;
-	int iReward;
-	std::list<const char*> apszTools;
-	EVehicleType eType;
+	const char*				pszName;
+	int						iReward;
+	std::list<const char*>	apszTools;
+	EVehicleType			eType;
 
 };
 

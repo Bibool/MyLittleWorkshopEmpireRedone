@@ -1,5 +1,5 @@
-#ifndef _GAMEMANAGER_H_
-#define _GAMEMANAGER_H_
+#ifndef GAMEMANAGER_H
+#define GAMEMANAGER_H
 
 class Player;
 class InputManager;

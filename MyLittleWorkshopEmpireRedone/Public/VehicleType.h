@@ -1,7 +1,7 @@
-#ifndef _VEHICLETYPE_H_
-#define _VEHICLETYPE_H_
+#ifndef VEHICLETYPE_H
+#define VEHICLETYPE_H
 
-#include <stdint.h>
+#include <cstdint>
 
 #ifndef ENUM_MIN
 	#define ENUM_MIN 0

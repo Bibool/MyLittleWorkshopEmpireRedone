@@ -1,7 +1,7 @@
-#ifndef _CHEATS_H_
-#define _CHEATS_H_
+#ifndef CHEATS_H
+#define CHEATS_H
 
-#include <stdint.h>
+#include <cstdint>
 
 enum class ECheats : uint8_t
 {
@@ -9,4 +9,4 @@ enum class ECheats : uint8_t
 	Tools
 };
 
-#endif	// !_CHEATS_H_
+#endif

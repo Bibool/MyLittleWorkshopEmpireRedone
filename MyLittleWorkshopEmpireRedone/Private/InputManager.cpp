@@ -7,18 +7,8 @@
 #include "../Public/GameManager.h"
 
 #include <iostream>
-#include <stdio.h>
-#include <stddef.h>
 
-InputManager::InputManager()
-{
-}
-
-InputManager::~InputManager()
-{
-}
-
-int InputManager::HandleInput( const std::string& input )
+int InputManager::HandleInput( const std::string& input ) const
 {
 	int gameStatus = CONTINUE;
 	const char inputToChar = input.at( 0 );
@@ -135,12 +125,12 @@ int InputManager::HandleInput( const std::string& input )
 	return gameStatus;
 }
 
-bool InputManager::IsSingleChar( const std::string input ) const
+bool InputManager::IsSingleChar( const std::string& input )
 {
 	return input.length() == 1;
 }
 
-bool InputManager::CharCompare( const char input, const char inKey ) const
+bool InputManager::CharCompare( const char input, const char inKey )
 {
 	return ( input == tolower( inKey ) || input == toupper( inKey ) );
 }

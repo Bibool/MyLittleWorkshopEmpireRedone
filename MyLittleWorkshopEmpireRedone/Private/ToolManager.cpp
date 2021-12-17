@@ -4,8 +4,6 @@
 #include "../Public/debug.h"
 #include "../Public/Tool.h"
 
-#include <list>
-
 ToolManager::ToolManager()
 {
 	InitTools();
@@ -19,12 +17,12 @@ ToolManager::~ToolManager()
 	}
 }
 
-const std::array<Tool*, 6>& ToolManager::GetTools() const
+const std::array<Tool*, Tools::MaxTools>& ToolManager::GetTools() const
 {
 	return m_apcTools;
 }
 
-Tool* ToolManager::FindTool( const char* inName )
+Tool* ToolManager::FindTool( const char* inName ) const
 {
 	for ( Tool* tool : m_apcTools )
 	{

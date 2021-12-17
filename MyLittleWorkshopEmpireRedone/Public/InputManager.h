@@ -1,5 +1,5 @@
-#ifndef _INPUTMANAGER_H_
-#define _INPUTMANAGER_H_
+#ifndef INPUTMANAGER_H
+#define INPUTMANAGER_H
 
 #include <string>
 
@@ -8,14 +8,14 @@ class GameManager;
 class InputManager
 {
 public:
-	InputManager();
-	~InputManager();
+	InputManager() = default;
+	~InputManager() = default;
 
-	int  HandleInput		( const std::string& input );
+	int  HandleInput		( const std::string& input ) const;
 
 private:
-	bool CharCompare	( const char input, const char inKey ) const;
-	bool IsSingleChar	( const std::string input ) const;
+	static bool CharCompare	( const char input, const char inKey );
+	static bool IsSingleChar	( const std::string& input );
 
 	static constexpr int EXIT = 0;
 	static constexpr int CONTINUE = 1;

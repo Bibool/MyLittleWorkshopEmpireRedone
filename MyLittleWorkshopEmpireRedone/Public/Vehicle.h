@@ -1,7 +1,5 @@
-#ifndef _VEHICLE_H_
-#define _VEHICLE_H_
-
-#include "VehicleType.h"
+#ifndef VEHICLE_H
+#define VEHICLE_H
 
 #include <list>
 
@@ -11,7 +9,7 @@ class Vehicle
 {
 public:
 	Vehicle();
-	Vehicle( const char* name, const EVehicleType& eType );
+	Vehicle( const char* name );
 	~Vehicle();
 
 	void AddMalfunction( Malfunction* newMalfunction );
@@ -20,8 +18,7 @@ public:
 
 private:
 	std::list<Malfunction*> m_apcMalfunctions;
-	const char* m_pszName;
-	EVehicleType m_eType;
+	const char*				m_pszName;
 };
 
 #endif

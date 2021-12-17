@@ -1,5 +1,5 @@
-#ifndef _DEBUG_H_
-#define _DEBUG_H_
+#ifndef DEBUG_H
+#define DEBUG_H
 
 #ifdef _DEBUG
 	#define ASSERT_CHECK(param) assert(param)

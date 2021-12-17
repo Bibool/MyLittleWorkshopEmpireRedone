@@ -1,5 +1,7 @@
-#ifndef _TOOLMANAGER_H_
-#define _TOOLMANAGER_H_
+#ifndef TOOLMANAGER_H
+#define TOOLMANAGER_H
+
+#include "config.h"
 
 #include <array>
 
@@ -12,11 +14,11 @@ public:
 	~ToolManager();
 
 	const std::array<Tool*, 6>& GetTools() const;
-	Tool* FindTool( const char* inName );
+	Tool* FindTool( const char* inName ) const;
 	
 private:
 	void InitTools();
-	std::array<Tool*, 6> m_apcTools;
+	std::array<Tool*, Tools::MaxTools> m_apcTools{};
 };
 
 #endif

@@ -7,29 +7,24 @@
 #include "Public/config.h"
 
 #include <iostream>
-#include <stdio.h>
+#include <cstdio>
 #include <string>
 
-
-#ifndef LOOP
-	#define EXIT 0
-	#define PLAYING 1
-#endif // LOOP
 
 void ParseCheats( int argc, char* argv[] );
 
 // Entry and Exit point.
-int main( int argc, char* argv[] )
+int main( const int argc, char* argv[] )
 {
 	g_GameManager = new GameManager();
 	g_GameManager->GetMessageManager()->PrintMessage( EMessageType::Welcome );
 	ParseCheats( argc, argv );
 
 	// Game start. PLAYING = 1, EXIT = 0
-	int gameIsRunning = PLAYING;
+	int gameIsRunning = 1;
 
 	// Input will be stored in this string
-	std::string input = "";
+	std::string input;
 
 	// Game loop. Feed the input to the input manager.
 	while (gameIsRunning)
@@ -46,7 +41,7 @@ int main( int argc, char* argv[] )
 
 void ParseCheats( int argc, char* argv[] )
 {
-	int max = 1 + Cheats::Codes;
+	constexpr int max = 1 + Cheats::Codes;
 	if ((argc >= 2))
 	{
 		printf( "\n\n~~~~~~~~~~~~~~~~~~~~~* WOW *~~~~~~~~~~~~~~~~~~~~~\n" );

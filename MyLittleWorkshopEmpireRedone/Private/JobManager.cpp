@@ -42,22 +42,20 @@ void JobManager::Init()
 	GeneratorJobs();
 }
 
-void JobManager::SelectJob( int atIndex )
+void JobManager::SelectJob(const int atIndex )
 {
 	if (m_apcJobs[atIndex])
 	{
 		Malfunction* job = m_apcJobs[atIndex];
 
-		int iCounter = 0;
-		std::list<Tool*> toolsToUse;
-
 		if (!job->GetIsJobComplete())
 		{
+			std::list<Tool*> toolsToUse;
+			int iCounter = 0;
 			for (Tool* tool : job->GetRequiredTools())
 			{
-				for (int x = 0; x != g_GameManager->GetToolManager()->GetTools().size(); ++x)
+				for (const auto it : g_GameManager->GetToolManager()->GetTools())
 				{
-					Tool* it = g_GameManager->GetToolManager()->GetTools()[x];
 					if (it == tool && it->IsOwned() && it->GetWear())
 					{
 						toolsToUse.push_back( tool );
@@ -67,15 +65,15 @@ void JobManager::SelectJob( int atIndex )
 				}
 			}
 
-			if (iCounter == job->GetRequiredTools().size())
+			if (iCounter == static_cast<int>(job->GetRequiredTools().size()))
 			{
 				printf( "You have the required tools: \n" );
-				for (auto tool : toolsToUse)
+				for (const auto tool : toolsToUse)
 				{
 					printf( "	 - [%s]. Wear: [%d].\n", tool->GetName(), tool->GetWear() );
 				}
 
-				for (auto tool : toolsToUse)
+				for (const auto tool : toolsToUse)
 				{
 					if (!GetRandomNumInRange( 0, 1 ))
 					{
@@ -110,9 +108,9 @@ void JobManager::GeneratorJobs()
 	{
 		if (iCounter != MAX_JOBS)
 		{
-			EVehicleType vehicleType = EVehicleType( GetRandomNumInRange( ENUM_MIN, ENUM_MAX ) );
-			Vehicle* newVehicle = new Vehicle( GetVehicleName( vehicleType ), vehicleType );
-			int numMalfunctions = GetNumMalfunctionForVehicle( vehicleType );
+			EVehicleType vehicleType = static_cast<EVehicleType>(GetRandomNumInRange(ENUM_MIN, ENUM_MAX));
+			Vehicle* newVehicle = new Vehicle( GetVehicleName( vehicleType ) );
+			const int numMalfunctions = GetNumMalfunctionForVehicle( vehicleType );
 
 			for (int n = 0; n != numMalfunctions; ++n)
 			{
@@ -157,10 +155,10 @@ const char* JobManager::GetVehicleName( const EVehicleType& vehicleType )
 			break;
 	}
 
-	for (auto name : inNames)
+	for (const auto name : inNames)
 	{
 		bool bNamePreviouslyUsed = false;
-		for (auto savedNames : m_apszNames)
+		for (const auto savedNames : m_apszNames)
 		{
 			if (name == savedNames)
 				bNamePreviouslyUsed = true;
@@ -187,18 +185,16 @@ Malfunction* JobManager::GetMalfunction( const EVehicleType& vehicleType )
 	{
 		if (malfunction->GetVehicleType() == vehicleType)
 		{
-			if (m_apcMalfunctionsFound.size())
+			if ( !m_apcMalfunctionsFound.empty() )
 			{
 				// check against current array.
-				for (auto currentMalfunctions : m_apcMalfunctionsFound)
+				for (const auto currentMalfunctions : m_apcMalfunctionsFound)
 				{
 					if (currentMalfunctions->GetName() == malfunction->GetName())
 					{
 						bDuplicateFoundInArray = true;
 						break;
 					}
-					//else
-						
 				}
 			}
 			// SCENARIO: NO CURRENT MALFUNCTIONS ADDED -> SET DATA

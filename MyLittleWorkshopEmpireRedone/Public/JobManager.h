@@ -1,11 +1,9 @@
-#ifndef _JOBMANAGER_H_
-#define _JOBMANAGER_H_
+#ifndef JOBMANAGER_H
+#define JOBMANAGER_H
 
-#include "NameData.h"
 #include "VehicleType.h"
 
 #include <list>
-
 
 class GameManager;
 class Malfunction;
@@ -35,8 +33,8 @@ private:
 	std::list<Malfunction*> m_apcMalfunctionsFound;
 	int						m_iNameIndex;
 	int						m_iMalfunctionIndex;
-	int						m_iJobsCompleted = 0;
+	int						m_iJobsCompleted;
 	Malfunction*			m_apcJobs[10];
 };
 
-#endif // _JOBMANAGER_H_
+#endif

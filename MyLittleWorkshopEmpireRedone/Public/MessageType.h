@@ -1,7 +1,7 @@
-#ifndef _MESSAGETYPE_H_
-#define _MESSAGETYPE_H_
+#ifndef MESSAGETYPE_H
+#define MESSAGETYPE_H
 
-#include <stdint.h>
+#include <cstdint>
 
 enum class EMessageType : uint8_t
 {

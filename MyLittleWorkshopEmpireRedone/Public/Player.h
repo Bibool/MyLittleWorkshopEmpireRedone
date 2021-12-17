@@ -1,18 +1,15 @@
-#ifndef _PLAYER_H_
-#define _PLAYER_H_
+#ifndef PLAYER_H
+#define PLAYER_H
 
 #include "Cheats.h"
-
-#include <array>
 
 class Player
 {
 public:
 	Player();
-	~Player();
 
 	// Initializes the tools the player starts with.
-	void Init();
+	static void Init();
 
 	void Cheat( const ECheats& inCheat );
 
@@ -28,7 +25,7 @@ public:
 	void Payday( int iAmount );
 
 private:
-	void UnlockAllTools();
+	static void UnlockAllTools();
 
 	// Money the player is currently holding
 	int m_iMoney;

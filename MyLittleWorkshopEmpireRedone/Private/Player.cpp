@@ -11,17 +11,8 @@ Player::Player()
 {
 }
 
-Player::~Player()
-{	
-}
-
 void Player::Init()
 {
-	if (g_GameManager)
-	{
-		int x = 0;
-	}
-
 	for (Tool* inTool : g_GameManager->GetToolManager()->GetTools())
 	{
 		if (inTool->GetName() == PlayerInit::FirstStartingToolName || inTool->GetName() == PlayerInit::SecondStartingToolName)
@@ -56,7 +47,6 @@ void Player::PurchaseTool( int toolIndex )
 
 			if (toolAtIndex->IsOwned())
 			{
-				int currentWear = toolAtIndex->GetWear();
 				toolAtIndex->IncreaseWear( Tools::ToolInitialWear );
 				const std::string wearUpgraded = toolAtIndex->GetName() + std::string(". You already owned this tool so it's wear has been increased");
 				g_GameManager->GetMessageManager()->PrintMessage( EMessageType::BuySuccess, wearUpgraded.c_str() );

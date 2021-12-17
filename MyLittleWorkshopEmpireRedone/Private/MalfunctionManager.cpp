@@ -7,8 +7,7 @@
 
 MalfunctionManager::MalfunctionManager()
 	: m_apcMalfunctions()
-{
-}
+{}
 
 MalfunctionManager::~MalfunctionManager()
 {
@@ -35,7 +34,7 @@ void MalfunctionManager::GenerateMalfunctions()
 	for (int i = 0; i != Malfunctions::CompactCar::MaxMalfunctions; ++i)
 	{
 		m_apcMalfunctions.at( i ) = new Malfunction( Malfunctions::CompactCarMalfunctions[i] );
-		for (auto tool : Malfunctions::CompactCarMalfunctions->apszTools)
+		for (const auto tool : Malfunctions::CompactCarMalfunctions->apszTools)
 		{
 			m_apcMalfunctions.at( i )->AddRequiredTool( g_GameManager->GetToolManager()->FindTool( tool ) );
 		}
@@ -44,7 +43,7 @@ void MalfunctionManager::GenerateMalfunctions()
 	for ( int i = 0; i != Malfunctions::RacingCar::MaxMalfunctions; ++i )
 	{
 		m_apcMalfunctions.at( index ) = new Malfunction( Malfunctions::RacingCarMalfunctions[i] );
-		for (auto tool : Malfunctions::RacingCarMalfunctions->apszTools)
+		for (const auto tool : Malfunctions::RacingCarMalfunctions->apszTools)
 		{
 			m_apcMalfunctions.at( index )->AddRequiredTool( g_GameManager->GetToolManager()->FindTool( tool ) );
 		}
@@ -53,7 +52,7 @@ void MalfunctionManager::GenerateMalfunctions()
 	for ( int i = 0; i != Malfunctions::MotorCycle::MaxMalfunctions; ++i )
 	{
 		m_apcMalfunctions.at( index ) = new Malfunction( Malfunctions::MotorCycleMalfunctions[i] );
-		for (auto tool : Malfunctions::MotorCycleMalfunctions->apszTools)
+		for (const auto tool : Malfunctions::MotorCycleMalfunctions->apszTools)
 		{
 			m_apcMalfunctions.at( index )->AddRequiredTool( g_GameManager->GetToolManager()->FindTool( tool ) );
 		}

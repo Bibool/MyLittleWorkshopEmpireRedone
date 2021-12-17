@@ -1,5 +1,5 @@
-#ifndef _CONFIG_H_
-#define _CONFIG_H_
+#ifndef CONFIG_H
+#define CONFIG_H
 
 #include "MalfunctionData.h"
 
@@ -20,7 +20,7 @@
 #endif
 
 #ifndef MAX_TOOLS_INDEX
-	#define MAX_TOOLS_INDEX Tools::MaxTools - 1
+	#define MAX_TOOLS_INDEX (Tools::MaxTools - 1)
 #endif
 
 namespace Input
@@ -35,13 +35,13 @@ namespace Input
 	static const char* ShopKey		= "S";
 	static const char* BuyToolKey	= "B";
 	static const char* ClearKey		= "C";
-	static const int MaxSelectionIndex = 9;
+	static constexpr int MaxSelectionIndex = 9;
 	static const char* Keys[10] = { ExitKey, HelpKey, ConfirmKey, CancelKey, InventoryKey, JobsKey, AcceptJobKey, ShopKey, BuyToolKey, ClearKey };
 }
 
 namespace Tools
 {
-	static const int MaxTools = 6;
+	static constexpr int MaxTools = 6;
 
 	static const char* JackName				= "Jack";
 	static const char* TorqueBraceName		= "Torque Brace";
@@ -52,25 +52,25 @@ namespace Tools
 	static const char* ToolsName[MaxTools] = 
 	{ JackName, TorqueBraceName, JumperCablesName, PhaseTesterName, HammerName, ScrewdriverName };
 
-	static const int JackPrice			= 50;
-	static const int TorqueBracePrice	= 40;
-	static const int JumperCablesPrice	= 50;
-	static const int PhaseTesterPrice	= 10;
-	static const int HammerPrice		= 20;
-	static const int ScrewdriverPrice	= 10;
-	static const int ToolsPrice[MaxTools] = 
+	static constexpr int JackPrice			= 50;
+	static constexpr int TorqueBracePrice	= 40;
+	static constexpr int JumperCablesPrice	= 50;
+	static constexpr int PhaseTesterPrice	= 10;
+	static constexpr int HammerPrice		= 20;
+	static constexpr int ScrewdriverPrice	= 10;
+	static constexpr int ToolsPrice[MaxTools] = 
 	{ JackPrice, TorqueBracePrice, JumperCablesPrice, PhaseTesterPrice, HammerPrice, ScrewdriverPrice };
 
-	static const int ToolInitialWear = 5;
+	static constexpr int ToolInitialWear = 5;
 }
 
 namespace Malfunctions
 {
-	static const int MaxJobs = 10;
+	static constexpr int MaxJobs = 10;
 
 	namespace RacingCar
 	{
-		static const int MaxMalfunctions = 4;
+		static constexpr int MaxMalfunctions = 4;
 
 		static const std::list<const char*> GasPedalBrokenTools = { Tools::ScrewdriverName,	Tools::TorqueBraceName };
 		static const std::list<const char*> EngineFailureTools = { Tools::TorqueBraceName, Tools::ScrewdriverName };
@@ -83,7 +83,7 @@ namespace Malfunctions
 	}
 	namespace CompactCar
 	{
-		static const int MaxMalfunctions = 4;
+		static constexpr int MaxMalfunctions = 4;
 
 		static const std::list<const char*> ShockAbsorberTools = { Tools::HammerName,		Tools::ScrewdriverName, Tools::TorqueBraceName };
 		static const std::list<const char*> EngineFailureTools = { Tools::TorqueBraceName, Tools::ScrewdriverName };
@@ -96,7 +96,7 @@ namespace Malfunctions
 	}
 	namespace MotorCycle
 	{
-		static const int MaxMalfunctions = 3;
+		static constexpr int MaxMalfunctions = 3;
 
 		static const std::list<const char*> FlatTireTools = { Tools::JackName,		Tools::TorqueBraceName };
 		static const std::list<const char*> EmptyBatteryTools = { Tools::JumperCablesName, Tools::PhaseTesterName };
@@ -106,7 +106,7 @@ namespace Malfunctions
 		static const SMalfunctionData LightsOff = SMalfunctionData( "Lights Off", 2, LightsOffTools, EVehicleType::MotorCycle );
 	}
 
-	static const int MaxMalfunctions = 
+	static constexpr int MaxMalfunctions = 
 		Malfunctions::CompactCar::MaxMalfunctions + 
 		Malfunctions::RacingCar::MaxMalfunctions + 
 		Malfunctions::MotorCycle::MaxMalfunctions;
@@ -149,7 +149,7 @@ namespace PlayerInit
 {
 	static const char*	FirstStartingToolName	= Tools::JackName;
 	static const char*	SecondStartingToolName	= Tools::TorqueBraceName;
-	static const int	StartingMoney			= 200;
+	static constexpr int	StartingMoney			= 200;
 }
 
 namespace Messages
@@ -184,11 +184,11 @@ namespace Messages
 
 namespace Cheats
 {
-	const int Codes = 2;
+	constexpr int Codes = 2;
 	const std::string AddMoney = "POTOFGOLD";
 	const std::string UnlockTools = "WORKSHOPEMPEROR";
 	const std::string All[Codes] = { AddMoney, UnlockTools };
-	const int NumMoney = 20000;
+	constexpr int NumMoney = 20000;
 }
 
 #endif

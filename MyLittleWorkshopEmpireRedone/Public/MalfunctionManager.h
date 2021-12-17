@@ -1,5 +1,5 @@
-#ifndef _MALFUNCTIONMANAGER_H_
-#define	_MALFUNCTIONMANAGER_H_
+#ifndef MALFUNCTIONMANAGER_H
+#define	MALFUNCTIONMANAGER_H
 
 #include "config.h"
 #include <array>

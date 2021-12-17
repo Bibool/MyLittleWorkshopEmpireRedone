@@ -1,5 +1,5 @@
-#ifndef _NAMEDATA_H_
-#define _NAMEDATA_H_
+#ifndef NAMEDATA_H
+#define NAMEDATA_H
 
 struct SNameData
 {

@@ -1,15 +1,14 @@
 #include "../Public/Vehicle.h"
 
 #include "../Public/debug.h"
+#include "../Public/Malfunction.h"
 
 Vehicle::Vehicle()
 	: m_pszName( "" )
-	, m_eType(EVehicleType::CompactCar)
 {}
 
-Vehicle::Vehicle( const char* name, const EVehicleType& eType )
+Vehicle::Vehicle( const char* name )
 	: m_pszName ( name )
-	, m_eType ( eType )
 {}
 
 Vehicle::~Vehicle()
